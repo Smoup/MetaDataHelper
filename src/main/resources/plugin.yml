@@ -1,0 +1,4 @@
+name: MetaDataHelper
+version: '${project.version}'
+main: main.mdh.MetaDataHelper
+api-version: 1.19
