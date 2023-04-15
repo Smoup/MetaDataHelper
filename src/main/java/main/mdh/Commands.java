@@ -47,14 +47,15 @@ public class Commands implements CommandExecutor, TabCompleter {
                         sender.sendMessage("/mdh get [key]");
                     }
                 } else if (args[0].equals("set")) {
-                    if (args.length > 1) {
+                    if (args.length > 2) {
                         String key = args[1];
                         if (!args[2].isEmpty()) {
                             if (!args[3].isEmpty()) {
-                                String value = null;
+                                StringBuilder valueBuilder = new StringBuilder();
                                 for (int i = 3; i < args.length; i++) {
-                                    value = value + args[i] + " ";
+                                    valueBuilder.append(args[i]).append(" ");
                                 }
+                                String value = String.valueOf(valueBuilder);
                                 value = value.replace("null", "");
                                 MetadataValue metadataValue = new FixedMetadataValue(MetaDataHelper.getInstance(), value);
                                 block.setMetadata(key, metadataValue);
