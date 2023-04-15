@@ -44,13 +44,13 @@ public class Commands implements CommandExecutor, TabCompleter {
                                     GRAY + "под данным ключём отсутствует в выбранном блоке");
                         }
                     } else {
-                        sender.sendMessage("/MetaData get [key]");
+                        sender.sendMessage("/mdh get [key]");
                     }
                 } else if (args[0].equals("set")) {
                     if (args.length > 1) {
                         String key = args[1];
-                        if (!args[3].isEmpty()) {
-                            if (!args[4].isEmpty()) {
+                        if (!args[2].isEmpty()) {
+                            if (!args[3].isEmpty()) {
                                 String value = null;
                                 for (int i = 3; i < args.length; i++) {
                                     value = value + args[i] + " ";
@@ -68,7 +68,7 @@ public class Commands implements CommandExecutor, TabCompleter {
                             }
                         }
                     } else {
-                        sender.sendMessage("/MetaData set [key] [dataType] [value]");
+                        sender.sendMessage("/mdh set [key] [dataType] [value]");
                     }
                 }
             } else {
