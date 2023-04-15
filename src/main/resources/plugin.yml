@@ -3,5 +3,5 @@ version: '${project.version}'
 main: main.mdh.MetaDataHelper
 api-version: 1.19
 commands:
-  metadata:
+  mdh:
     description: "Allows you to view/modify MetaData in the selected block using the right mouse button."

@@ -16,7 +16,7 @@ public final class MetaDataHelper extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
-        Objects.requireNonNull(getCommand("MetaData")).setExecutor(new Commands());
+        Objects.requireNonNull(getCommand("mdh")).setExecutor(new Commands());
         Bukkit.getPluginManager().registerEvents(new BukkitEventHandler(), this);
     }
 
